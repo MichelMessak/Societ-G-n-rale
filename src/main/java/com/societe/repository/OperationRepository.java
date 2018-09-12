@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Repository for operation
+ */
 @Repository
 public interface OperationRepository extends JpaRepository<Operation, Long> {
 
