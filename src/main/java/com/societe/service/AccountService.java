@@ -67,6 +67,12 @@ public class AccountService {
         return accoutRepository.findById(accountId).orElseThrow(() -> new AccountNotExistException("Account does not exist whith #id : " + accountId));
     }
 
+    /**
+     * Check all operations for a specific account
+     *
+     * @param accountId
+     * @return a list of operations dto
+     */
     @Transactional(readOnly = true)
     public List<OperationDto> checkOperations(final long accountId) {
         return operationService.getAllByAccountId(accountId);
